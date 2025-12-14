@@ -1,9 +1,13 @@
 import React  from 'react'
 import Navbar from '../Navbar/Navbar';
 
-import Movielist from '../Movielist/Movielist';
+
+import dynamic from 'next/dynamic';
 
 
+const Movielist = dynamic(() => import ("../Movielist/Movielist"), {
+  loading : () =>  <p>Loading movies...</p>
+});
 const movie = () => {
 
   return (
@@ -12,6 +16,7 @@ const movie = () => {
     <div> 
     <Navbar />  
     </div>
+
    <Movielist />
 
     

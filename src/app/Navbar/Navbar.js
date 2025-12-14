@@ -4,6 +4,7 @@ const data = [
   { id: 1, nav: "Home", href : "/movie" },
   { id: 2, nav: "Movies", href : "/movie" },
   { id: 3, nav: "TV Shows", href : "/movie" },
+  { id: 4, nav: "🔎︎ Search", href : "/Search" },
 ];
 
 const Navbar = () => {

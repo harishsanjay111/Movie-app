@@ -8,11 +8,15 @@ const Movielist = async () => {
     const Data = await fetch("https://api.themoviedb.org/3/movie/popular",  {
         headers: {
             Authorization: `Bearer ${process.env.NEXT_PUBLIC_API_ACCESS_TOKEN}`,
-          }
-     })
+          },
+          //if api data rarely changes Revalidates Periodically
+          next: { revalidate: 3600 }
+     },
+      )
      .then(res => res.json()) 
      .catch(err => console.error(err)); 
-
+     console.log(Data);
+     
      
      const movies = Data.results;
       

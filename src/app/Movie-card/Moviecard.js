@@ -9,7 +9,8 @@ const Moviecard = ({ movie }) => {
     <div className="relative rounded-xl overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105">
 
   <Image
-    src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+    // src={movie.poster_path ? `https://image.tmdb.org/t/p/w500${movie.poster_path}` : '/regular-poster.jpg'}
+    src={'/regular-poster.jpg'}
     width={500}
     height={500}
     alt={movie.title}
